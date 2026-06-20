@@ -1,113 +1,405 @@
-.mac-book-pro-14-1 {
+body {
     display: flex;
-    flex-direction: column;
-    gap: 70px;
-    width: 100%;
-    height: 982px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://images.indianexpress.com/2025/08/Vande-Bharat-7.jpg?w=1200") lightgray 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    min-height: 100vh;  
+    padding: 20px;
 }
 
-.passenger-info {
+.basketball-scoreboard {
     display: flex;
-    width: 459px;
-    padding: 20px 12px;
+    width: 100%;
+    max-width: 1000px;  
+    padding: 44px 56px;
     flex-direction: column;
     align-items: center;
-    gap: 70px;
-    flex-shrink: 0;
+    gap: 36px;
+    border-radius: 28px;
+    border: 2px solid #3B82F6;
+    background: linear-gradient(180deg, #121C3B 0%, #0B1126 100%);
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.45);
 }
 
 .header {
-    color: #black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.title {
+    color: #3B82F6;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 6px;
+}
+
+.subtitle {
+    color: #F2F5FF;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4px;
+}
+
+.score-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 24px auto;
+    flex-wrap: wrap; 
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    flex: 1 0 0;
+    flex-wrap: wrap; 
+}
+
+.game-clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    align-self: stretch;
+}
+
+.frame2 {
+    display: flex;
+    padding: 5px 14px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid #3B82F6;
+    background: rgba(59, 130, 246, 0.15);
+}
+
+.quarter-label {
+    color: #C7DBFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+.frame3 {
+    display: flex;
+    padding: 12px 18px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 176, 33, 0.50);
+    background: #05050A;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.80) inset;
+}
+
+.game-time {
+    color: #FFB021;
+    text-shadow: 0 0 14px rgba(255, 153, 13, 0.80);
     font-family: Inter;
     font-size: 40px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: normal;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
 }
 
-.counter {
-    color: #black;
-    text-align: center;
-    font-family: Inter;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 0.8px;
-}
-
-.action-container {
+.game-clock-label {
     display: flex;
+    padding: 8px 10px;
     justify-content: center;
     align-items: center;
-    gap: 87px;
-}
-
-.add-button {
-    display: flex;
-    padding: 12px 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 10px;
-    background: #1E1E1E;    
-}
-
-.add-button-text {
-
-    color: #FFF;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 0.48px;
-}
-
-.save-button {
-    display: flex;
-    padding: 12px 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 10px;
-    border: 1.5px solid #000;
-}
-
-.save-button-text {
+    border-radius: 12px;
+    background: orange;
+    box-shadow: 0 6px 16px 0 rgba(59, 130, 246, 0.40);
+    margin-top: 10px;
     color: black;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: normal;
-    letter-spacing: 0.48px;
+    letter-spacing: 2px;
+    border: none;
+    appearance: none;
+    cursor: pointer;  
 }
 
-.previous-entry-container {
+.home-label {
+    color: #F2F5FF;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3px;
+}
+
+.leader-badge {
     display: flex;
-    padding: 14px 18px;
+    padding: 4px 12px;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    border-radius: 10px;
-    background: #6B7280;
+    gap: 6px;
+    border-radius: 999px;
+    border: 1px solid #22C560;
+    background: rgba(34, 197, 96, 0.16);
 }
 
-.previous-entry-text {
-    color: #FFF;
-    text-align: center;
+.ellipse {
+    width: 7px;
+    height: 7px;
+    fill: #22C560;
+}
+
+.leading-label {
+    color: #80F2A6;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.5px;
+}
+
+.score-box {
+    display: flex;
+    height: 150px;
+    padding: 18px 30px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 14px;
+    border: 2px solid #22C560;
+    background: #05050A;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.80) inset;
+}
+
+.home-score {
+    color: #22C560;
+    text-shadow: 0 0 20px rgba(33, 217, 102, 0.85);
+    font-family: Inter;
+    font-size: 110px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fouls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.fouls-label {
+color: #738CC7;
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 2px;
+}
+
+.frame {
+    display: flex;
+    padding: 3px 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 102, 64, 0.60);
+    background: rgba(255, 102, 64, 0.15);
+}
+
+.fouls-number {
+    color: #FF8C66;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.foul-btn {
+    display: flex;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 102, 64, 0.70);
+    background: rgba(255, 102, 64, 0.18);
+    color: #FF9E80;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+} 
+
+.buttons {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+flex-wrap: wrap;
+gap: 12px;
+}
+
+.btn-1 {
+    display: flex;
+    padding: 30px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #3B82F6;
+    background: rgba(59, 130, 246, 0.12);
+}
+
+.increment-button-1 {
+    color: #C7DBFF;
+    font-family: Inter;
+    font-size: 28px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    letter-spacing: 0.48px;
+}
+
+.btn-2 {
+    display: flex;
+    padding: 30px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #3B82F6;
+    background: rgba(59, 130, 246, 0.12);
+}
+
+.increment-button-2 {
+    color: #C7DBFF;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.btn-3 {
+    display: flex;
+    padding: 30px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #3B82F6;
+    background: rgba(59, 130, 246, 0.12);
+}
+
+.increment-button-3 {
+    color: #C7DBFF;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.guest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    flex: 1 0 0;
+}
+
+.guest-label {
+    color: #F2F5FF;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3px;
+}
+
+.spacer {
+
+}
+
+.score-box2 {
+    display: flex;
+    height: 150px;
+    padding: 18px 0;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 14px;
+    border: 1px solid #3B82F6;
+    background: #05050A;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.80) inset;
+}
+
+.guest-score {
+    color: #FF3B3B;
+    text-shadow: 0 0 18px rgba(255, 38, 38, 0.85);
+    font-family: Inter;
+    font-size: 110px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.new-game {
+    display: flex;
+    padding: 14px 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #3B82F6;
+    box-shadow: 0 6px 16px 0 rgba(59, 130, 246, 0.40);
+    margin-top: 10px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2px;
+    border: none;
+    appearance: none;
+    cursor: pointer;  
+} 
+
+.Q_btn {
+    display: flex;
+    padding: 14px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #3B82F6;
+    box-shadow: 0 6px 16px 0 rgba(59, 130, 246, 0.40);
+    margin-top: 10px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2px;
+    border: none;
+    appearance: none;
+    cursor: pointer;  
 }

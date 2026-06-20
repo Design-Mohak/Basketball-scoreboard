@@ -1,27 +1,114 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <link rel="stylesheet" href="style.css">
-        </head>
-            <body>
-                <div class="mac-book-pro-14-1"
-                    <div class="passenger-info">
-                        <div class="header">Passenger count</div>
-                        <div class="counter" id="variable">0</div>
-                        <div class="action-container">
-                        <button class="add-button" onclick="increase()">
-                            <div class="add-button-text">Add</div>
-                        </button>
-                        <button class="save-button" onclick="save()">
-                            <div class="save-button-text">Save</div>
-                        </button>
-                </div>
-                        <div class="previous-entry-container">
-                            <div class="previous-entry-text" id="add">Previous Entry:</div>
-                        </div>
-                    </div>
-                </div>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
 
-                <script src="index.js"></script>
-            </body>
-    </html>
+  <body>
+    <!-- ┌─ SCOREBOARD (whole card) -->
+    <div class="basketball-scoreboard">
+
+      <!-- ├─ HEADER -->
+      <div class="header">
+        <div class="title">BASKETBALL</div>
+        <div class="subtitle">SCOREBOARD</div>
+      </div> <!-- /header -->
+
+      <!-- ├─ SCORE ROW (home · clock · guest) -->
+      <div class="score-row">
+
+        <!-- │  ├─ HOME team -->
+        <div class="home">
+          <div class="home-label">HOME</div>
+
+          <!-- badge: green dot + LEADING -->
+          <div class="leader-badge" id="home-badge">
+            <svg class="ellipse" xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+              <circle cx="3.5" cy="3.5" r="3.5" fill="#22C560"/>
+            </svg>
+            <div class="leading-label">LEADING</div>
+          </div> <!-- /leader-badge -->
+
+          <!-- score display -->
+          <div class="score-box">
+            <div class="home-score" id="home-scoreP">0</div>
+          </div> <!-- /score-box -->
+
+          <!-- fouls counter -->
+          <div class="fouls">
+            <div class="fouls-label">FOULS</div>
+            <div class="frame">
+              <div class="fouls-number" id="foulH">0</div>
+            </div>
+            <button class="foul-btn" onclick="foul_btnH()"> + FOUL</button>
+          </div> <!-- /fouls -->
+
+          <!-- +1 / +2 / +3 buttons -->
+          <div class="buttons">
+            <button class="btn-1 increment-button-1" onclick="increase1()">+1</button>
+            <button class="btn-2 increment-button-2" onclick="increase2()">+2</button>
+            <button class="btn-3 increment-button-3" onclick="increase3()">+3</button>
+          </div> <!-- /buttons -->
+        </div> <!-- /home -->
+
+        <!-- │  ├─ GAME CLOCK (center) -->
+        <div class="game-clock">
+          <div class="frame2">
+            <div class="quarter-label" id="Q_text">Q1</div>
+          </div>
+          <button class="Q_btn" onclick="Qbtn()">Quarter</button>
+          <div class="frame3">
+            <div class="game-time" id="game_T">12:00</div>
+          </div>
+          <button class="game-clock-label" onclick="startClock_btn()">GAME CLOCK</button>
+           
+        </div> <!-- /game-clock -->
+
+        <!-- │  └─ GUEST team -->
+        <div class="guest">
+          <div class="guest-label">GUEST</div>
+
+          <!-- badge: green dot + LEADING -->
+          <div class="leader-badge" id="guest-badge">
+            <svg class="ellipse" xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+              <circle cx="3.5" cy="3.5" r="3.5" fill="#22C560"/>
+            </svg>
+            <div class="leading-label">LEADING</div>
+          </div> <!-- /leader-badge -->
+
+          <!-- score display -->
+          <div class="score-box2">
+            <div class="guest-score" id="guest-scoreP">0</div>
+          </div> <!-- /score-box2 -->
+
+         <!-- fouls counter -->
+          <div class="fouls">
+            <div class="fouls-label">FOULS</div>
+            <div class="frame">
+              <div class="fouls-number" id="foulG">0</div>
+            </div>
+            <button class="foul-btn" onclick="foul_btnG()"> + FOUL</button>
+          </div> <!-- /fouls -->
+
+          <!-- +1 / +2 / +3 buttons -->
+          <div class="buttons">
+            <button class="btn-1 increment-button-1" onclick="increasea()">+1</button>
+            <button class="btn-2 increment-button-2" onclick="increaseb()">+2</button>
+            <button class="btn-3 increment-button-3" onclick="increasec()">+3</button>
+          </div> <!-- /buttons -->
+        </div> <!-- /guest -->
+        
+
+      </div> <!-- /score-row -->
+
+      <!-- └─ NEW GAME button -->
+              <button class="new-game" onclick="newgame()">NEW GAME</button>
+
+    </div> <!-- /basketball-scoreboard -->
+      <script src="index.js"></script>
+  </body>
+</html>
